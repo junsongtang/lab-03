@@ -19,6 +19,7 @@ library(ggplot2)
 
 ```{r echo=FALSE, out.width="100%"}
 knitr::include_graphics("img/Speaking-the-world.jpg")
+read.csv("/data/instructional-staff.csv")
 ```
 
 _Write your comments about image 1 below_
