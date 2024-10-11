@@ -389,7 +389,17 @@ library(ggplot2)</code></pre>
 </div>
 <div id="exercises" class="section level1">
 <h1>Exercises</h1>
-<pre class="r"><code>staff &lt;- read_csv(&quot;data/instructional-staff.csv&quot;)</code></pre>
+<pre class="r"><code>staff &lt;- read_csv(&quot;data/instructional-staff.csv&quot;)
+staff</code></pre>
+<pre><code>## # A tibble: 5 × 12
+##   faculty_type    `1975` `1989` `1993` `1995` `1999` `2001` `2003` `2005` `2007`
+##   &lt;chr&gt;            &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
+## 1 Full-Time Tenu…   29     27.6   25     24.8   21.8   20.3   19.3   17.8   17.2
+## 2 Full-Time Tenu…   16.1   11.4   10.2    9.6    8.9    9.2    8.8    8.2    8  
+## 3 Full-Time Non-…   10.3   14.1   13.6   13.6   15.2   15.5   15     14.8   14.9
+## 4 Part-Time Facu…   24     30.4   33.1   33.2   35.5   36     37     39.3   40.5
+## 5 Graduate Stude…   20.5   16.5   18.1   18.8   18.7   19     20     19.9   19.5
+## # ℹ 2 more variables: `2009` &lt;dbl&gt;, `2011` &lt;dbl&gt;</code></pre>
 <div id="exercise-1" class="section level2">
 <h2>Exercise 1</h2>
 <p>What is the difference between <em>wide format</em> data and <em>long
@@ -398,14 +408,20 @@ individual. The observations made at different time points are coded as
 different columns. In the wide format every measure that varies in time
 occupies a set of columns. In the long format there will be multiple
 records for each individual.</p>
-<p>Is the format <code>staff</code> data <em>wide</em> or
-<em>long</em>?</p>
-<p>How many observations are there in the data set?</p>
+<p>Is the format <code>staff</code> data <em>wide</em> or <em>long</em>?
+wide</p>
+<p>How many observations are there in the data set? 5</p>
 </div>
 <div id="exercise-2" class="section level2">
 <h2>Exercise 2</h2>
 <pre class="r"><code>## Uncomment and complete the following code
 
+staff_long &lt;- staff %&gt;%
+  pivot_longer(
+    cols = starts_with(&quot;19&quot;) | starts_with(&quot;20&quot;),  # Columns that represent years (1975, 1989, etc.)
+    names_to = &quot;year&quot;,  # New column to hold the year values
+    values_to = &quot;percentage&quot;  # New column to hold the percentage values
+  )
 #staff_long &lt;- ___ %&gt;%
 #  ___(
 #    cols = ____, 
