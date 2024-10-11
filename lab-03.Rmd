@@ -94,6 +94,7 @@ staff_long <- staff %>%
     values_to = "percent"  # New column to hold the percentage values
   )
 
+staff_long
 ```
 
 

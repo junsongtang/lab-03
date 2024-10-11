@@ -421,7 +421,23 @@ staff_long &lt;- staff %&gt;%
     cols = starts_with(&quot;19&quot;) | starts_with(&quot;20&quot;),  # Columns that represent years (1975, 1989, etc.)
     names_to = &quot;year&quot;,  # New column to hold the year values
     values_to = &quot;percent&quot;  # New column to hold the percentage values
-  )</code></pre>
+  )
+
+staff_long</code></pre>
+<pre><code>## # A tibble: 55 × 3
+##    faculty_type              year  percent
+##    &lt;chr&gt;                     &lt;chr&gt;   &lt;dbl&gt;
+##  1 Full-Time Tenured Faculty 1975     29  
+##  2 Full-Time Tenured Faculty 1989     27.6
+##  3 Full-Time Tenured Faculty 1993     25  
+##  4 Full-Time Tenured Faculty 1995     24.8
+##  5 Full-Time Tenured Faculty 1999     21.8
+##  6 Full-Time Tenured Faculty 2001     20.3
+##  7 Full-Time Tenured Faculty 2003     19.3
+##  8 Full-Time Tenured Faculty 2005     17.8
+##  9 Full-Time Tenured Faculty 2007     17.2
+## 10 Full-Time Tenured Faculty 2009     16.8
+## # ℹ 45 more rows</code></pre>
 </div>
 <div id="exercise-3" class="section level2">
 <h2>Exercise 3</h2>
