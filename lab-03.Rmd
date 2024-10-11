@@ -1,6 +1,6 @@
 ---
 title: "Lab 03 - Take a sad plot and make it better"
-author: "Yiming Lu, Junsong Tang, Zeyu Guo, Junxi Lu, Yushen Hui and Boning Zhang - digitalcigraite"
+author: "Yiming Lu, Junsong Tang, Zeyu Guo, Junxi Lu, Yushen Hui and Boning Zhang - digitalcigarette"
 date: "`r Sys.Date()`"
 output: html_document
 ---
