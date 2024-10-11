@@ -66,6 +66,7 @@ _Write your comments about image 4 below_
 
 ```{r load-data-staff, message=FALSE, eval=TRUE}
 staff <- read_csv("data/instructional-staff.csv")
+staff
 ```
 
 
@@ -75,7 +76,7 @@ What is the difference between *wide format* data and *long format* data?
 A wide dataset will have one record for each individual. The observations made at different time points are coded as different columns. In the wide format every measure that varies in time occupies a set of columns. In the long format there will be multiple records for each individual.
 
 Is the format `staff` data *wide* or *long*?
-
+wide
 
 How many observations are there in the data set?
 
